@@ -1,0 +1,14 @@
+[Unit]
+Description=Weed service      
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=gijs
+ExecStart=/usr/bin/weed master
+
+[Install]
+WantedBy=multi-user.target
